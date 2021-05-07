@@ -2,9 +2,10 @@
 # Dockerfile for Apache Web Server
 #
 
-FROM ubuntu:trusty
+FROM ubuntu:focal
 MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y apache2 curl unzip && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_RUN_USER www-data
