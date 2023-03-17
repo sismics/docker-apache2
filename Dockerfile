@@ -2,7 +2,7 @@
 # Dockerfile for Apache Web Server
 #
 
-FROM ubuntu:focal
+FROM ubuntu:jammy
 MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 
 ENV DEBIAN_FRONTEND noninteractive
