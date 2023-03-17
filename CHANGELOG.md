@@ -1,5 +1,5 @@
 ## Change Log
-### Version 2.4.52-4 (2023-03-17)
+### Version 2.4.52 (2023-03-17)
 - Upgrade to Ubuntu Jammy
 ### Version 2.4.41-4 (2021-05-07)
 - Upgrade to Ubuntu Focal
