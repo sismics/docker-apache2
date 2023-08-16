@@ -6,7 +6,10 @@ FROM ubuntu:jammy
 MAINTAINER Jean-Marc Tremeaux <jm.tremeaux@sismics.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install -y apache2 curl unzip && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+    && apt-get install -y apache2 curl unzip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
@@ -19,8 +22,8 @@ RUN mkdir -p /var/lock/apache2
 COPY opt /opt
 COPY etc /etc
 
-RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
-RUN ln -s /etc/apache2/mods-available/remoteip.load /etc/apache2/mods-enabled/
+RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/ \
+    && ln -s /etc/apache2/mods-available/remoteip.load /etc/apache2/mods-enabled/
 
 EXPOSE 80 443
 
